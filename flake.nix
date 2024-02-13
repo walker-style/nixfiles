@@ -15,12 +15,15 @@
       system = "x86_64-linux";
       lib = nixpkgs.lib;
       pkgs = nixpkgs.legacyPackages.${system};
+      systemSettings = {
+        profile = "developer";
+      };
     in {
 
       nixosConfigurations = {
         nixos-walker = lib.nixosSystem {
         inherit system;
-        modules = [ ./configuration.nix ];
+        modules = [ (./. + "/profiles"+("/"+systemSettings.profile)+"/configuration.nix") ];
           
         };
       };
@@ -28,7 +31,7 @@
       homeConfigurations = {
         jonathan = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          modules = [ ./home.nix ];
+          modules = [ (./. + "/profiles"+("/"+systemSettings.profile)+"/home.nix") ];
         };
       };
     };
