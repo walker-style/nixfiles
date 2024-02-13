@@ -12,17 +12,17 @@
   outputs = { self, nixpkgs, home-manager, ... }:
 
     let 
-      system = "x86_64-linux";
-      lib = nixpkgs.lib;
-      pkgs = nixpkgs.legacyPackages.${system};
       systemSettings = {
         profile = "developer";
+      	system = "x86_64-linux";
       };
+      pkgs = nixpkgs.legacyPackages.${systemSettings.system};
+      lib = nixpkgs.lib;
     in {
 
       nixosConfigurations = {
         nixos-walker = lib.nixosSystem {
-        inherit system;
+        system = systemSettings.system;
         modules = [ (./. + "/profiles"+("/"+systemSettings.profile)+"/configuration.nix") ];
           
         };
