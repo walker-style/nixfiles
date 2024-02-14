@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ../../system/hardware-configuration.nix
+      ../../system/wm/i3.nix
     ];
 
   # Bootloader.
@@ -58,28 +59,7 @@
       alacritty
       stow   
       home-manager
-];
-  };
-
-  environment.pathsToLink = [ "/libexec" ];
-
-  services.xserver = {
-    enable = true;
-    
-    desktopManager = {
-      xterm.enable = false;
-    };
-    
-    displayManager = {
-      defaultSession = "none+i3";
-    };
-
-    windowManager.i3 = {
-      enable = true;
-      extraPackages = with pkgs; [
-        rofi
-      ];
-    };
+    ];
   };
 
   # Ensure nix flakes are enabled
@@ -108,6 +88,10 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
+  programs.fish.enable = true;
+
+  fonts.fontDir.enable = true;
+
 
   # List services that you want to enable:
 
