@@ -52,7 +52,6 @@
     firefox
     alacritty
     stow   
-    home-manager
     
   ];
 
