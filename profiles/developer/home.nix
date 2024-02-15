@@ -39,12 +39,14 @@
     stdenv.cc.cc.lib 
     ripgrep
     
+    
     # lanaguage servers
     nixd
     lua-language-server
 
     # linter
     stylua
+    nodejs
     nodePackages.prettier
     black
 
@@ -68,6 +70,9 @@
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
+
+    ".config/i3/config".source = ../../users/dotfiles/i3/config;
+    ".config/.tmux.conf".source = ../../users/dotfiles/.tmux.conf;
   };
 
   # Home Manager can also manage your environment variables through
