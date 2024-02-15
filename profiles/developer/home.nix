@@ -37,6 +37,7 @@
     neovim
     gcc11
     stdenv.cc.cc.lib 
+    ripgrep
     
     # lanaguage servers
     nixd
@@ -88,11 +89,6 @@
   home.sessionVariables = {
     # EDITOR = "emacs";
   };
-
-  programs.fish = {
-    enable = true;
-  };
-
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
