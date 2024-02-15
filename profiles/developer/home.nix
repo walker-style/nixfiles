@@ -46,6 +46,12 @@
     stylua
     nodePackages.prettier
     black
+
+
+    firefox
+    alacritty
+    stow   
+    home-manager
     
   ];
 

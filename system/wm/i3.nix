@@ -1,14 +1,13 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ./x11.nix
+  ];
+
   environment.pathsToLink = [ "/libexec" ];
 
   services.xserver = {
-    enable = true;
-    
-    desktopManager = {
-      xterm.enable = false;
-    };
     
     displayManager = {
       defaultSession = "none+i3";

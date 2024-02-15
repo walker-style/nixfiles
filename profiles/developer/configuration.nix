@@ -43,12 +43,6 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  # Configure keymap in X11
-  services.xserver = {
-    layout = "us";
-    xkbVariant = "";
-  };
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.jonathan = {
     isNormalUser = true;
@@ -79,6 +73,7 @@
     vim
     git
     pciutils
+    home-manager
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
