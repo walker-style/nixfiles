@@ -5,7 +5,7 @@
   imports = [
     ./intel
     ./gpu/intel
-    ./gpu/nvidia
+#    ./gpu/nvidia
     ./opengl
   ];
 
