@@ -70,6 +70,7 @@
     git
     pciutils
     home-manager
+    zsh
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -82,10 +83,10 @@
 
   fonts.fontDir.enable = true;
 
-  programs.bash.enable = true;
-  programs.zsh.enable  = true;
-
-  programs.bash.defaultInterpreter = true;
+  # I use zsh btw
+  environment.shells = with pkgs; [ zsh ];
+  users.defaultUserShell = pkgs.zsh;
+  programs.zsh.enable = true;
 
   # List services that you want to enable:
 
