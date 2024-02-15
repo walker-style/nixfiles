@@ -70,8 +70,8 @@
     #   org.gradle.daemon.idletimeout=3600000
     # '';
 
-    ".config/i3/config".source = ../../users/dotfiles/i3/config;
-    ".config/tmux/tmux.conf".source = ../../users/dotfiles/tmux/tmux.conf;
+#    ".config/i3/config".source = ../../users/dotfiles/i3/config;
+#    ".config/tmux/tmux.conf".source = ../../users/dotfiles/tmux/tmux.conf;
   };
 
   # Home Manager can also manage your environment variables through
@@ -95,5 +95,6 @@
   };
 
   # Let Home Manager install and manage itself.
+  programs.bash.enable = true;
   programs.home-manager.enable = true;
 }

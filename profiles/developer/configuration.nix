@@ -82,6 +82,10 @@
 
   fonts.fontDir.enable = true;
 
+  programs.bash.enable = true;
+  programs.zsh.enable  = true;
+
+  programs.bash.defaultInterpreter = true;
 
   # List services that you want to enable:
 
