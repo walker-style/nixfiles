@@ -49,10 +49,6 @@
     description = "Jonathan Walker";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      firefox
-      alacritty
-      stow   
-      home-manager
     ];
   };
 
@@ -83,7 +79,6 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
-  programs.fish.enable = true;
 
   fonts.fontDir.enable = true;
 
