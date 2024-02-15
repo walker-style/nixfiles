@@ -7,7 +7,8 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ../../system/hardware-configuration.nix
+      ../../system/hardware/hardware-configuration.nix
+      ../../system/hardware/legion.nix
       ../../system/wm/i3.nix
     ];
 
