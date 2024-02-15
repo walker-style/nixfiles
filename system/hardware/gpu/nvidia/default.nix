@@ -1,25 +1,19 @@
-{ lib, config, pkgs, ... }:
+{ lib, pkgs, config, ... }:
 
 {
-
-
-  boot.initrd.kernelModules = ["nvidia"];
-  boot.extraModulePackages = [
-    #config.boot.kernelPackages.lenovo-legion-module 
-    config.boot.kernelPackages.nvidia_x11
+  services.xserver.videoDrivers = lib.mkDefault [ "nvidia" ];
+  hardware.opengl.extraPackages = with pkgs; [
+    vaapiVdpau
   ];
 
-  # Load nvidia driver for Xorg and Wayland
-  services.xserver.videoDrivers = ["nvidia"];
-
-
-  hardware = {
-    nvidia = {
-      modesetting.enable = lib.mkDefault true;
-      powerManagement.enable = lib.mkDefault true;
-      
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
+  
+  hardware.nvidia.prime = {
+    offload = {
+      enable = lib.mkOverride 990 true;
+      enableOffloadCmd = lib.mkIf config.hardware.nvidia.prime.offload.enable true; # Provides `nvidia-offload` command.
     };
+    # Hardware should specify the bus ID for intel/nvidia devices
   };
 
-  }
+
+}
