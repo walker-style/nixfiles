@@ -39,7 +39,6 @@
     stdenv.cc.cc.lib 
     ripgrep
     
-    
     # lanaguage servers
     nixd
     lua-language-server
@@ -53,8 +52,8 @@
 
     firefox
     alacritty
-    stow   
     
+    tmux
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -72,7 +71,7 @@
     # '';
 
     ".config/i3/config".source = ../../users/dotfiles/i3/config;
-    ".config/.tmux.conf".source = ../../users/dotfiles/tmux/.tmux.conf;
+    ".config/tmux/.tmux.config".source = ../../users/dotfiles/tmux/tmux.config;
   };
 
   # Home Manager can also manage your environment variables through
@@ -90,6 +89,7 @@
   #
   #  /etc/profiles/per-user/jonathan/etc/profile.d/hm-session-vars.sh
   #
+
   home.sessionVariables = {
     # EDITOR = "emacs";
   };
