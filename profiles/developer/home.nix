@@ -71,7 +71,7 @@
     # '';
 
     ".config/i3/config".source = ../../users/dotfiles/i3/config;
-    ".config/tmux/.tmux.config".source = ../../users/dotfiles/tmux/tmux.config;
+    ".config/tmux/tmux.conf".source = ../../users/dotfiles/tmux/tmux.conf;
   };
 
   # Home Manager can also manage your environment variables through
