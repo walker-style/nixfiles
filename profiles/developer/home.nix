@@ -1,6 +1,9 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ../../users/i3status-rust
+  ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "jonathan";
