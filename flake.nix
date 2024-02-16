@@ -12,7 +12,7 @@
  
     };
 
-  outputs = { self, nixpkgs, home-manager, stylix, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, stylix, ... }:
 
     let 
       systemSettings = {
@@ -54,7 +54,6 @@
             inherit systemSettings;
             inherit userSettings;
           };
-          inherit (inputs) stylix;
           
         };
       };
@@ -68,7 +67,6 @@
             inherit systemSettings;
             inherit userSettings;
           };
-          inherit (inputs) stylix;
         };
       };
     };
