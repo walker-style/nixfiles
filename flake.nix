@@ -31,10 +31,9 @@
         wmType = if (wm == "hyprland") then "wayland" else "x11";
         #browser = "qutebrowser"; # Default browser; must select one from ./user/app/browser/
         #defaultRoamDir = "Personal.p"; # Default org roam directory relative to ~/Org
-        opacity = 0.85; # Default opacity for windows
         term = "alacritty"; # Default terminal command;
-        font = "Intel One Mono"; # Selected font
-        fontPkg = pkgs.intel-one-mono; # Font package
+        font = "Noto Sans CJK SC"; # Selected font
+        fontPkg = pkgs.noto-fonts-cjk; # Font package
         editor = "nvim"; # Default editor;
         # editor spawning translator
         # generates a command that can be used to spawn editor inside a gui

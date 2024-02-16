@@ -64,7 +64,7 @@ set $right l
 #tiling_drag modifier titlebar
 
 # start a terminal
-bindsym Mod1+Return exec alacritty -e tmux attach || tmux
+bindsym Mod1+Return exec alacritty
 
 # kill focused window
 bindsym Mod4+Shift+q kill
