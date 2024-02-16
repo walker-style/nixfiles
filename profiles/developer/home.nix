@@ -3,6 +3,7 @@
 {
   imports = [
     ../../users/i3status-rust
+    ../../users/alacritty
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -40,6 +41,7 @@
     neovim
     gcc11
     stdenv.cc.cc.lib 
+    fd
     ripgrep
     
     # lanaguage servers
@@ -102,6 +104,5 @@
   };
 
   # Let Home Manager install and manage itself.
-  programs.bash.enable = true;
   programs.home-manager.enable = true;
 }
