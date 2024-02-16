@@ -13,7 +13,7 @@
            
     };
 
-  outputs = { self, nixpkgs, home-manager, ... }:
+  outputs = { self, nixpkgs, home-manager, stylix, ... }:
 
     let 
       systemSettings = {
