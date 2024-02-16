@@ -75,7 +75,6 @@ in
   stylix.targets.rofi.enable = true;
   stylix.targets.feh.enable = true;
   programs.feh.enable = true;
-  home.file.".background-image".source = config.stylix.image;
   home.file.".fehbg-stylix".text = ''
     #!/bin/sh
     feh --no-fehbg --bg-fill ''+config.stylix.image+'';

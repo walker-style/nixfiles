@@ -75,6 +75,7 @@
     pciutils
     home-manager
     zsh
+    picom
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
