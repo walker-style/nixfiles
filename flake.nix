@@ -12,7 +12,7 @@
  
     };
 
-  outputs = { self, nixpkgs, home-manager, stylix, ... }:
+  outputs = { self, nixpkgs, home-manager, stylix, ... }@inputs:
 
     let 
       systemSettings = {
@@ -49,6 +49,7 @@
         nixos-walker = lib.nixosSystem {
         system = systemSettings.system;
         modules = [ (./. + "/profiles"+("/"+systemSettings.profile)+"/configuration.nix") ];
+          inherit (inputs) stylix;
           specialArgs = {
             # pass config variables from above
             inherit systemSettings;
@@ -60,8 +61,9 @@
 
       homeConfigurations = {
         jonathan = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
           modules = [ (./. + "/profiles"+("/"+systemSettings.profile)+"/home.nix") ];
+          inherit pkgs;
+          inherit (inputs) stylix;
           extraSpecialArgs = {
             # pass config variables from above
             inherit systemSettings;
