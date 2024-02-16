@@ -49,7 +49,7 @@ in
       # TODO revisit these color mappings
       # these are just the default provided from stylix
       # but declared directly due to alacritty v3.0 breakage
-      primary.background = "#"+config.lib.stylix.colors.base00;
+#      primary.background = "#"+config.lib.stylix.colors.base00;
       primary.foreground = "#"+config.lib.stylix.colors.base07;
       cursor.text = "#"+config.lib.stylix.colors.base00;
       cursor.cursor = "#"+config.lib.stylix.colors.base07;
