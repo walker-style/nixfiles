@@ -10,7 +10,9 @@ in
   home.file.".currenttheme".text = userSettings.theme;
   stylix.autoEnable = false;
   stylix.polarity = themePolarity;
+  stylix.opacity.applications = userSettings.opacity;
   stylix.image = pkgs.fetchurl {
+    enable = true;
     url = backgroundUrl;
     sha256 = backgroundSha256;
   };
