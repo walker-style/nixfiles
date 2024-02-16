@@ -4,15 +4,16 @@
 
   inputs = {
 
-          nixpkgs.url = "nixpkgs/nixos-unstable";
-          home-manager.url = "github:nix-community/home-manager/master";
-          home-manager.inputs.nixpkgs.follows = "nixpkgs";
+      nixpkgs.url = "nixpkgs/nixos-unstable";
+      home-manager.url = "github:nix-community/home-manager/master";
+      home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-          stylix.url = "github:danth/stylix";
- 
+      stylix.url = "github:danth/stylix";
+
+           
     };
 
-  outputs = { self, nixpkgs, home-manager, stylix, ... }:
+  outputs = { self, nixpkgs, home-manager, ... }:
 
     let 
       systemSettings = {
@@ -50,7 +51,6 @@
         system = systemSettings.system;
         modules = [ 
           (./. + "/profiles"+("/"+systemSettings.profile)+"/configuration.nix")
-          stylix.nixosModules.stylix
         ];
           specialArgs = {
             # pass config variables from above
@@ -65,8 +65,6 @@
         jonathan = home-manager.lib.homeManagerConfiguration {
           modules = [ 
             (./. + "/profiles"+("/"+systemSettings.profile)+"/home.nix") 
-            stylix.nixosModules.stylix
-            
           ];
           inherit pkgs;
           extraSpecialArgs = {
