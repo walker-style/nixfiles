@@ -50,6 +50,7 @@
         nixos-walker = lib.nixosSystem {
         system = systemSettings.system;
         modules = [ 
+          stylix.nixosModules.stylix
           (./. + "/profiles"+("/"+systemSettings.profile)+"/configuration.nix")
         ];
           specialArgs = {
