@@ -70,29 +70,5 @@ in
     };
     font.size = config.stylix.fonts.sizes.terminal;
   };
-  stylix.targets.rofi.enable = if (userSettings.wmType == "x11") then true else false;
-  stylix.targets.feh.enable = if (userSettings.wmType == "x11") then true else false;
-  programs.feh.enable = true;
-  home.file.".fehbg-stylix".text = ''
-    #!/bin/sh
-    feh --no-fehbg --bg-fill ''+config.stylix.image+'';
-  '';
-  home.file.".fehbg-stylix".executable = true;
-  home.packages = with pkgs; [
-     qt5ct pkgs.libsForQt5.breeze-qt5
-  ];
-  home.sessionVariables = {
-    QT_QPA_PLATFORMTHEME="qt5ct";
-  };
-  programs.zsh.sessionVariables = {
-    QT_QPA_PLATFORMTHEME="qt5ct";
-  };
-  programs.bash.sessionVariables = {
-    QT_QPA_PLATFORMTHEME="qt5ct";
-  };
-  qt = {
-    enable = true;
-    style.package = pkgs.libsForQt5.breeze-qt5;
-    style.name = "breeze-dark";
-  };
-}
+  stylix.targets.rofi.enable = true;
+  }
