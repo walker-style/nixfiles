@@ -11,12 +11,12 @@ in
   stylix.autoEnable = false;
   stylix.polarity = themePolarity;
   stylix.opacity.applications = userSettings.opacity;
+  
   stylix.image = pkgs.fetchurl {
     enable = true;
     url = backgroundUrl;
     sha256 = backgroundSha256;
   };
-  home.file.".background-image".file = config.stylix.image.outPath;
   stylix.base16Scheme = ./. + themePath;
   
   stylix.fonts = {
@@ -74,4 +74,11 @@ in
     font.size = config.stylix.fonts.sizes.terminal;
   };
   stylix.targets.rofi.enable = true;
+  stylix.targets.feh.enable = true;
+  programs.feh.enable = true;
+    home.file.".fehbg-stylix".text = ''
+    #!/bin/sh
+    feh --no-fehbg --bg-fill ''+config.stylix.image+'';
+  '';
+  home.file.".fehbg-stylix".executable = true;
   }
