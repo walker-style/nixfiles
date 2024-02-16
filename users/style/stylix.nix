@@ -16,6 +16,7 @@ in
     url = backgroundUrl;
     sha256 = backgroundSha256;
   };
+  home.file.".background-image".file = config.stylix.image.outPath;
   stylix.base16Scheme = ./. + themePath;
   
   stylix.fonts = {
