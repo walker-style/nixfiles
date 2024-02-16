@@ -1,9 +1,11 @@
-{ config, pkgs, ... }:
+{ config, pkgs, stylix, ... }:
 
 {
   imports = [
+    stylix.homeManagerModules.stylix
     ../../users/i3status-rust
     ../../users/alacritty
+    ../../users/style/stylix.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
