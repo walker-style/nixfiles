@@ -8,7 +8,7 @@ let
 in
 {
   home.file.".currenttheme".text = userSettings.theme;
-  stylix.autoEnable = true;
+  stylix.autoEnable = false;
   stylix.polarity = themePolarity;
   stylix.opacity.applications = userSettings.opacity;
   
