@@ -8,7 +8,7 @@ let
 in
 {
   home.file.".currenttheme".text = userSettings.theme;
-  stylix.autoEnable = false;
+  stylix.autoEnable = true;
   stylix.polarity = themePolarity;
   stylix.opacity.applications = userSettings.opacity;
   
@@ -73,8 +73,9 @@ in
     font.size = config.stylix.fonts.sizes.terminal;
   };
   stylix.targets.rofi.enable = true;
-  config.stylix.targets.feh.enable = true;
+  stylix.targets.feh.enable = true;
   programs.feh.enable = true;
+  home.file.".background-image".source = config.stylix.image;
   home.file.".fehbg-stylix".text = ''
     #!/bin/sh
     feh --no-fehbg --bg-fill ''+config.stylix.image+'';
