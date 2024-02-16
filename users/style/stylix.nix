@@ -34,7 +34,7 @@ in
       package = pkgs.noto-fonts-emoji-blob-bin;
     };
     sizes = {
-      terminal = 18;
+      terminal = 12;
       applications = 12;
       popups = 12;
       desktop = 12;
