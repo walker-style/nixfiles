@@ -10,7 +10,10 @@
       ../../system/hardware/hardware-configuration.nix
       ../../system/hardware/legion.nix
       ../../system/wm/i3.nix
+      ../../system/style/stylix.nix
     ];
+
+
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
