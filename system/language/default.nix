@@ -7,7 +7,6 @@
         fcitx5-gtk
     ];
   };
-  services.xserver.desktopManager.runXdgAutoStartIfNone = true;
 }
 
 
