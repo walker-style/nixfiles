@@ -19,16 +19,16 @@ in
   stylix.base16Scheme = ./. + themePath;
   stylix.fonts = {
     monospace = {
-      name = userSettings.font;
-      package = userSettings.fontPkg;
+      name = userSettings.monoFont;
+      package = userSettings.monoFontPkg;
     };
     serif = {
-      name = userSettings.font;
-      package = userSettings.fontPkg;
+      name = userSettings.serifFont;
+      package = userSettings.serifFontPkg;
     };
     sansSerif = {
-      name = userSettings.font;
-      package = userSettings.fontPkg;
+      name = userSettings.sansSerifFont;
+      package = userSettings.sansSerifFontPkg;
     };
     emoji = {
       name = "Noto Color Emoji";
