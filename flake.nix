@@ -17,7 +17,7 @@
 
     let 
       systemSettings = {
-        profile = "developer";
+        profile = "gamer";
       	system = "x86_64-linux";
       };
       userSettings = rec {
