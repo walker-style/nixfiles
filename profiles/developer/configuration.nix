@@ -11,6 +11,7 @@
       ../../system/hardware/legion.nix
       ../../system/wm/i3.nix
       ../../system/style/stylix.nix
+      ../../system/language
     ];
 
 
