@@ -33,7 +33,7 @@
         #defaultRoamDir = "Personal.p"; # Default org roam directory relative to ~/Org
         term = "alacritty"; # Default terminal command;
         font = "JetBrains Mono"; # Selected font
-        fontPkg = pkgs.jetbrains-mono-fonts; # Font package
+        fontPkg = pkgs.jetbrains-mono; # Font package
         editor = "nvim"; # Default editor;
         # editor spawning translator
         # generates a command that can be used to spawn editor inside a gui
