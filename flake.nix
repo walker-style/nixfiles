@@ -32,8 +32,8 @@
         #browser = "qutebrowser"; # Default browser; must select one from ./user/app/browser/
         #defaultRoamDir = "Personal.p"; # Default org roam directory relative to ~/Org
         term = "alacritty"; # Default terminal command;
-        font = "Noto Sans CJK SC"; # Selected font
-        fontPkg = pkgs.noto-fonts-cjk; # Font package
+        font = "JetBrains Mono"; # Selected font
+        fontPkg = pkgs.jetbrains-mono-fonts; # Font package
         editor = "nvim"; # Default editor;
         # editor spawning translator
         # generates a command that can be used to spawn editor inside a gui
