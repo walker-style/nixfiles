@@ -7,6 +7,7 @@
     ../../users/alacritty
     ../../users/style/stylix.nix
     ../../users/scripts/nvidia-offload.nix
+    ../../users/obs
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
