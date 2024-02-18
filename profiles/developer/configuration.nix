@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ../../system/hardware/hardware-configuration.nix
       ../../system/hardware/legion.nix
+      ../../system/hardware/bluetooth
       ../../system/wm/i3.nix
       ../../system/style/stylix.nix
       ../../system/language
