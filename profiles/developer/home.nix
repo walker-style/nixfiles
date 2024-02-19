@@ -51,7 +51,9 @@
     nixd
     lua-language-server
     nodePackages.typescript-language-server
+    nodePackages.tailwindcss-language-server
     vscode-langservers-extracted
+    
 
     # linter
     stylua
