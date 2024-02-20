@@ -62,7 +62,6 @@
 
 
     firefox
-    chromium
     alacritty
     
     tmux
