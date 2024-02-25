@@ -3,7 +3,6 @@
   ...
 }: {
   imports = [
-    ./intel
     ./gpu/intel
     ./gpu/nvidia
     ./opengl
