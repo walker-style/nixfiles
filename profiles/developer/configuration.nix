@@ -77,7 +77,6 @@
     pciutils
     home-manager
     zsh
-    cairo
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -94,6 +93,8 @@
   environment.shells = with pkgs; [ zsh ];
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
+
+  virtualisation.docker.enable = true;
 
   # List services that you want to enable:
 
