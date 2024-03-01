@@ -58,6 +58,7 @@
     stylua
     nodePackages.prettier
     black
+    nodejs
     pyright
 
     
