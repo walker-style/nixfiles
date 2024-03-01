@@ -56,9 +56,11 @@
 
     # linter
     stylua
-    nodejs
     nodePackages.prettier
     black
+    pyright
+
+    
 
 
     firefox
