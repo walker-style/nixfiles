@@ -77,6 +77,7 @@
     pciutils
     home-manager
     zsh
+    python313
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
