@@ -78,6 +78,7 @@
     home-manager
     zsh
     unzip
+    python312
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
